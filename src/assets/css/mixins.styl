@@ -1,0 +1,25 @@
+border-1px($color)
+  // @media screen and (-webkit-min-device-pixel-ratio:3),(min-device-pixel-ratio:3)
+  //   -webkit-transform:scaleY(0.33)
+  //   transform: scaleY(0.33)
+  // @media screen and (-webkit-min-device-pixel-ratio:2),(min-device-pixel-ratio:2)
+  //   -webkit-transform:scaleY(0.5)
+  //   transform: scaleY(0.5)
+  // @media screen and (-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:2)
+  //   -webkit-transform:scaleY(0.7)
+  //   transform: scaleY(0.7)
+  position: relative
+  &::after
+      display: block
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+      content: ''
+      border-top:1px solid $color
+
+backgroundimg($urlname)
+  @media screen and (min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:2)
+    background-image:url($urlname@2x.png)
+  @media screen and (min-device-pixel-ratio:3),(-webkit-min-device-pixel-ratio:3)
+    background-image:url($urlname@3x.png)
